@@ -38,7 +38,11 @@ public: // Se define que es publica (La clase es privada por defecto)
 
 int main(){ // Main
     
-    int number;
+    int number; // Variable
+    int *ptr; // Variable pointer
+    
+    ptr = &number; // Se asigna una direccion al puntero
+    
     
     Mensaje mensaje("Cambio de mensaje"); // Se instancia el objeto con el constructor
     mensaje.mostrar(); // Se usa el metodo
@@ -47,7 +51,9 @@ int main(){ // Main
     
     cin>> number; // Asigna el input a una variable
     
-    cout<< "Introdujo: " << number << "\n" ;
+    cout<< "Introdujo: " << number <<
+    " .... Valor: " << *ptr <<
+    ", Dirreccion: " << ptr <<"\n" ; // Imprime el valor y la dirrecion de la variable
     
     if (number >= 10) {
         int number2;
